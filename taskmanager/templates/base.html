@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <title>Task Manager</title>
 </head>
 <body>
+
+<!-- navbar from materialize -->
+
+    <header>
+        <nav class="menu #000000 black">
+          <div class="nav-wrapper">
+            <a href="{{ url_for('home')}}" class="brand-logo #ffff8d yellow-text accent-1">Great Reads</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons #ffff8d yellow-text accent-1">Menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a class="nav-text #ffff8d yellow-text accent-1" href="{{ url_for('home')}}">Home</a></li>
+              <li><a class="nav-text #ffff8d yellow-text accent-1" href="">Read Reviews</a></li>
+              <li><a class="nav-text #ffff8d yellow-text accent-1" href="">Write Reviews</a></li>
+            </ul>
+          </div>
+        </nav>
+      
+        <ul class="menu sidenav #000000 black" id="mobile-demo">
+          <li><a class="nav-text #ffff8d yellow-text accent-1" href="{{ url_for('home')}}">Home</a></li>
+          <li><a class="nav-text #ffff8d yellow-text accent-1" href="">Read Reviews</a></li>
+          <li><a class="nav-text #ffff8d yellow-text accent-1" href="">Write Reviews</a></li>
+        </ul> 
+    </header>
+
+<!-- body starts here -->
+
     Hello World!
+
+<!-- footer from materialize -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
